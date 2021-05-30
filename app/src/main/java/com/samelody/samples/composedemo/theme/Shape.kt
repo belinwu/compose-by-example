@@ -1,4 +1,4 @@
-package com.samelody.samples.composedemo.ui.theme
+package com.samelody.samples.composedemo.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

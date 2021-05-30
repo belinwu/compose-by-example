@@ -1,4 +1,4 @@
-package com.samelody.samples.composedemo.ui.theme
+package com.samelody.samples.composedemo.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
@@ -30,7 +30,7 @@ private val LightColorPalette = lightColors(
 @Composable
 fun ComposeDemoTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    content: @Composable() () -> Unit
+    content: @Composable () -> Unit
 ) {
     val colors = if (darkTheme) {
         DarkColorPalette

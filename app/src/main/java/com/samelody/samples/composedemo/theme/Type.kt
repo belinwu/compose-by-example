@@ -1,4 +1,4 @@
-package com.samelody.samples.composedemo.ui.theme
+package com.samelody.samples.composedemo.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

@@ -7,7 +7,7 @@ object Dep {
     const val jvmTarget = "1.8"
 
     // Android
-    const val androidGradleVersion = "7.0.0-beta02"
+    const val androidGradleVersion = "7.0.0-beta03"
     const val compileSdk = 30
     const val targetSdk = 30
     const val minSdk = 21
