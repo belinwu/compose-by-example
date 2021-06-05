@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import com.samelody.samples.composedemo.base.BaseActivity
 import com.samelody.samples.composedemo.databinding.MainActivityBinding
+import com.samelody.samples.composedemo.state.StateActivity
 import com.samelody.samples.composedemo.text.SimpleTextActivity
 import kotlin.reflect.KClass
 
@@ -19,9 +20,8 @@ class MainActivity : BaseActivity() {
     }
 
     private fun initView() {
-        binding.simpleText.setOnClickListener {
-            startExample(SimpleTextActivity::class)
-        }
+        binding.simpleText.setOnClickListener { startExample(SimpleTextActivity::class) }
+        binding.state.setOnClickListener { startExample(StateActivity::class) }
     }
 
     private fun Activity.startExample(cls: KClass<out Activity>) {

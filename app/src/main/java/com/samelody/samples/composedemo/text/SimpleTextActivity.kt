@@ -11,16 +11,15 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.focus.focusModifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.samelody.samples.composedemo.base.BaseActivity
-import com.samelody.samples.composedemo.theme.ComposeDemoTheme
+import com.samelody.samples.composedemo.theme.AppTheme
 
 class SimpleTextActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ComposeDemoTheme {
+            AppTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
                     Column(
@@ -44,7 +43,7 @@ fun Greeting(name: String) {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    ComposeDemoTheme {
+    AppTheme {
         Greeting("Jetpack Compose")
     }
 }

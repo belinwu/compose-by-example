@@ -23,5 +23,9 @@
             android:name=".text.SimpleTextActivity"
             android:theme="@style/AppTheme.NoActionBar"
             />
+        <activity
+            android:name=".state.StateActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
     </application>
 </manifest>
