@@ -3,10 +3,12 @@ package com.samelody.samples.composedemo.layout
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -28,7 +30,7 @@ class StandardLayoutActivity : BaseActivity() {
 @Composable
 private fun ContentView() {
     Column(
-        modifier = Modifier
+        Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState()),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -39,23 +41,40 @@ private fun ContentView() {
         RowLayout()
         Section("Layout: Box")
         BoxLayout()
-        Section("Custom Composable using Column, Row and Box")
-        PreviewProfileCard()
+        Section("Layout: Column & Row & Box")
+        ProfileCard()
+        Section("Align: Column")
+        AlignInColumn()
+        Section("Align: Row")
+        AlignInRow()
+        Section("Modifier: padding")
+        PaddingModifier()
+        Section("Modifier: size")
+        SizeModifier()
+        Section("Modifier: requiredSize")
+        RequiredSizeModifier()
+        Section("Modifier: fillMaxSize")
+        FillSizeModifier()
+        Section("Modifier: matchParentSize")
+        MatchParentSizeModifier()
+        Section("Modifier: paddingFromBaseline")
+        PaddingFromBaselineModifier()
+        Section("Modifier: offset")
+        OffsetModifier()
+        Section("Modifier: weight: Column")
+        ColumnWeightModifier()
+        Section("Modifier: weight: Row")
+        RowWeightModifier()
     }
 }
-
-//@Preview
-//@Composable
-//private fun PreviewContentView() {
-//    ContentView()
-//}
 
 @Composable
 private fun ColumnLayout() {
     Column(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable {},
         horizontalAlignment = Alignment.CenterHorizontally,
-//        verticalArrangement = Arrangement.spacedBy(6.dp)
     ) {
         ColumnBox(color = Color.Blue)
         ColumnBox(color = Color.Black)
@@ -94,9 +113,10 @@ private fun PreviewColumnLayout() {
 @Composable
 private fun RowLayout() {
     Row(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable {},
         horizontalArrangement = Arrangement.Center,
-//        horizontalArrangement = Arrangement.SpaceAround
     ) {
         RowBox(color = Color.Blue)
         RowBox(color = Color.Black)
@@ -115,6 +135,7 @@ private fun BoxLayout() {
     Box(
         modifier = Modifier
             .size(200.dp)
+            .clickable {}
             .background(color = Color.Blue),
         contentAlignment = Alignment.Center
     ) {
@@ -140,22 +161,28 @@ private fun PreviewBoxLayout() {
 }
 
 @Composable
+@Preview(showBackground = true)
 fun ProfileCard() {
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .background(Color(0xFFEEEEEE))
+            .clickable {}
             .padding(6.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Box(
             modifier = Modifier
                 .size(48.dp)
-                .background(
-                    Color.Black,
-                    CircleShape
-                )
-        )
+                .background(Color.Black, CircleShape),
+            contentAlignment = Alignment.BottomEnd
+        ) {
+            Box(
+                modifier = Modifier
+                    .size(16.dp)
+                    .background(Color.Red, CircleShape)
+            )
+        }
         Spacer(Modifier.size(10.dp, 48.dp))
         Column {
             MaxWidthBox(color = Color.Blue)
@@ -176,7 +203,160 @@ fun MaxWidthBox(height: Dp = 24.dp, color: Color = Color.Black) {
 }
 
 @Composable
-@Preview(showBackground = true)
-fun PreviewProfileCard() {
-    ProfileCard()
+@Preview
+private fun AlignInColumn() {
+    Column(
+        Modifier
+            .size(150.dp)
+            .background(Color.Yellow),
+        verticalArrangement = Arrangement.Bottom,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Box(
+            Modifier
+                .size(50.dp)
+                .background(Color.Red))
+        Box(
+            Modifier
+                .size(50.dp)
+                .background(Color.Blue))
+    }
+}
+
+@Composable
+@Preview
+private fun AlignInRow() {
+    Row(
+        Modifier
+            .size(150.dp)
+            .background(Color.Yellow),
+        horizontalArrangement = Arrangement.End,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Box(
+            Modifier
+                .size(50.dp)
+                .background(Color.Red))
+        Box(
+            Modifier
+                .size(50.dp)
+                .background(Color.Blue))
+    }
+}
+
+@Composable
+@Preview
+private fun PaddingModifier() {
+    Text(
+        "Hello world!",
+        modifier = Modifier
+            .background(Color.Green)
+            .fillMaxWidth()
+            .padding(20.dp)
+    )
+}
+
+
+@Composable
+@Preview
+private fun SizeModifier() {
+    Box(
+        modifier = Modifier
+            .size(100.dp)
+            .background(Color.Red)
+    )
+}
+
+@Composable
+@Preview
+fun RequiredSizeModifier() {
+    Box(
+        Modifier
+            .size(90.dp, 150.dp)
+            .background(Color.Green)
+    ) {
+        Box(
+            Modifier
+                .requiredSize(100.dp, 100.dp)
+                .background(Color.Red))
+    }
+}
+
+@Composable
+@Preview
+fun FillSizeModifier() {
+    Box(
+        Modifier
+            .background(Color.Green)
+            .size(50.dp)
+            .padding(10.dp)
+    ) {
+        Box(
+            Modifier
+                .background(Color.Blue)
+                .fillMaxSize())
+    }
+}
+
+@Composable
+@Preview
+fun MatchParentSizeModifier() {
+    Box {
+        Spacer(
+            Modifier
+                .matchParentSize()
+                .background(Color.Green))
+       Text("Hello Jetpack Compose!")
+    }
+}
+
+@Composable
+@Preview
+fun PaddingFromBaselineModifier() {
+    Box(Modifier.background(Color.Yellow)) {
+        Text("Hello Compose", modifier = Modifier.paddingFromBaseline(top = 32.dp))
+    }
+}
+
+@Composable
+@Preview
+fun OffsetModifier() {
+    Box(
+        Modifier
+            .background(Color.Yellow)
+            .height(70.dp)
+            .width(200.dp)
+            .fillMaxWidth()
+    ) {
+        Text(
+            "Layout offset modifier",
+            Modifier.offset(x = 15.dp, y = 20.dp)
+        )
+        Text(
+            "Layout offset modifier",
+            Modifier.offset(x = (-10).dp, y = (-10).dp)
+        )
+    }
+}
+
+@Composable
+@Preview
+fun RowWeightModifier() {
+    Row(
+        Modifier.width(100.dp)
+    ) {
+        Box(Modifier.weight(2f).height(50.dp).background(Color.Blue))
+        Box(Modifier.weight(1f).height(50.dp).background(Color.Yellow))
+    }
+}
+
+@Composable
+@Preview
+fun ColumnWeightModifier() {
+    Column(
+        Modifier.height(100.dp).width(50.dp)
+    ) {
+        Box(Modifier.weight(2f).fillMaxWidth().background(Color.Blue))
+        Box(Modifier.weight(1f).fillMaxWidth().background(Color.Yellow))
+    }
 }
