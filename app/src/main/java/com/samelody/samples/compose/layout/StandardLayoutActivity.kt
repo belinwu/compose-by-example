@@ -1,4 +1,4 @@
-package com.samelody.samples.composedemo.layout
+package com.samelody.samples.compose.layout
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -16,9 +16,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.samelody.samples.composedemo.base.BaseActivity
-import com.samelody.samples.composedemo.base.Example
-import com.samelody.samples.composedemo.theme.AppTheme
+import com.samelody.samples.compose.base.BaseActivity
+import com.samelody.samples.compose.base.Example
+import com.samelody.samples.compose.theme.AppTheme
 
 class StandardLayoutActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

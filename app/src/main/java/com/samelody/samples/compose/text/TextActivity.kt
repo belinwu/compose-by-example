@@ -1,4 +1,4 @@
-package com.samelody.samples.composedemo.text
+package com.samelody.samples.compose.text
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -25,9 +25,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.samelody.samples.composedemo.R
-import com.samelody.samples.composedemo.base.*
-import com.samelody.samples.composedemo.theme.AppTheme
+import com.samelody.samples.compose.R
+import com.samelody.samples.compose.base.*
+import com.samelody.samples.compose.theme.AppTheme
 
 class TextActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

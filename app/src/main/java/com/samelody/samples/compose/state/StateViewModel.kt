@@ -1,4 +1,4 @@
-package com.samelody.samples.composedemo.state
+package com.samelody.samples.compose.state
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

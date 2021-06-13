@@ -1,14 +1,14 @@
-package com.samelody.samples.composedemo.main
+package com.samelody.samples.compose.main
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import com.samelody.samples.composedemo.base.BaseActivity
-import com.samelody.samples.composedemo.databinding.MainActivityBinding
-import com.samelody.samples.composedemo.layout.StandardLayoutActivity
-import com.samelody.samples.composedemo.state.StateActivity
-import com.samelody.samples.composedemo.text.TextActivity
-import com.samelody.samples.composedemo.text.TextFieldActivity
+import com.samelody.samples.compose.base.BaseActivity
+import com.samelody.samples.compose.databinding.MainActivityBinding
+import com.samelody.samples.compose.layout.StandardLayoutActivity
+import com.samelody.samples.compose.state.StateActivity
+import com.samelody.samples.compose.text.TextActivity
+import com.samelody.samples.compose.text.TextFieldActivity
 import kotlin.reflect.KClass
 
 class MainActivity : BaseActivity() {

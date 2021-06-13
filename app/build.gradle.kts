@@ -9,7 +9,7 @@ android {
     buildToolsVersion = Dep.buildToolsVersion
 
     defaultConfig {
-        applicationId = "com.samelody.samples.composedemo"
+        applicationId = "com.samelody.samples.compose"
         minSdk = Dep.minSdk
         targetSdk = Dep.targetSdk
         versionCode = 1

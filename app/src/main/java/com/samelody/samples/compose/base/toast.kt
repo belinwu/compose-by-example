@@ -1,4 +1,4 @@
-package com.samelody.samples.composedemo.base
+package com.samelody.samples.compose.base
 
 import android.content.Context
 import android.widget.Toast

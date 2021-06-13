@@ -1,4 +1,4 @@
-package com.samelody.samples.composedemo
+package com.samelody.samples.compose
 
 import org.junit.Test
 

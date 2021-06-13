@@ -1,4 +1,4 @@
-package com.samelody.samples.composedemo.theme
+package com.samelody.samples.compose.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

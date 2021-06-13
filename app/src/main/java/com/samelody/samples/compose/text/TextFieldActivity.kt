@@ -1,4 +1,4 @@
-package com.samelody.samples.composedemo.text
+package com.samelody.samples.compose.text
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -27,11 +27,11 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.samelody.samples.composedemo.base.BaseActivity
-import com.samelody.samples.composedemo.base.ExamplePadding
-import com.samelody.samples.composedemo.base.VExample
-import com.samelody.samples.composedemo.base.shortToast
-import com.samelody.samples.composedemo.theme.AppTheme
+import com.samelody.samples.compose.base.BaseActivity
+import com.samelody.samples.compose.base.ExamplePadding
+import com.samelody.samples.compose.base.VExample
+import com.samelody.samples.compose.base.shortToast
+import com.samelody.samples.compose.theme.AppTheme
 
 class TextFieldActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package com.samelody.samples.composedemo.base
+package com.samelody.samples.compose.base
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth

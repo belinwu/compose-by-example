@@ -1,4 +1,4 @@
-package com.samelody.samples.composedemo.state
+package com.samelody.samples.compose.state
 
 import android.os.Parcelable
 import androidx.compose.runtime.Composable

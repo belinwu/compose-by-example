@@ -1,8 +1,9 @@
-package com.samelody.samples.composedemo.state
+package com.samelody.samples.compose.state
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.OutlinedTextField
@@ -14,7 +15,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.samelody.samples.composedemo.base.BaseActivity
+import com.samelody.samples.compose.base.BaseActivity
+import com.samelody.samples.compose.base.VExample
 
 class StateActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,14 +28,19 @@ class StateActivity : BaseActivity() {
 @Composable
 private fun ContentView(viewModel: StateViewModel = viewModel()) {
     val name by viewModel.name.observeAsState("")
-    StateInput(name) {
-        viewModel.onNameChanged(it)
+    Column(
+        Modifier.padding(16.dp)
+    ) {
+        VExample("State and Jetpack Compose")
+        StateInput(name) {
+            viewModel.onNameChanged(it)
+        }
     }
 }
 
 @Composable
-fun StateInput(name: String, onChanged: (String) -> Unit) {
-    Column(modifier = Modifier.padding(16.dp)) {
+private fun StateInput(name: String, onChanged: (String) -> Unit) {
+    Column {
         Text(
             text = "Hello $name",
             modifier = Modifier.padding(bottom = 8.dp),
@@ -42,7 +49,8 @@ fun StateInput(name: String, onChanged: (String) -> Unit) {
         OutlinedTextField(
             value = name,
             onValueChange = onChanged,
-            label = { Text("Name") }
+            label = { Text("Name") },
+            modifier = Modifier.fillMaxWidth()
         )
     }
 }

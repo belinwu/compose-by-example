@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ComposeDemo</string>
+    <string name="app_name">Compose</string>
     <string name="text">Text</string>
     <string name="text_field">Text Field</string>
     <string name="state">State</string>

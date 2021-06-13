@@ -1,4 +1,4 @@
-package com.samelody.samples.composedemo.base
+package com.samelody.samples.compose.base
 
 import androidx.appcompat.app.AppCompatActivity
 
