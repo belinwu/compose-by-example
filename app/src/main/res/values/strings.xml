@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">ComposeDemo</string>
-    <string name="simple_text">Text</string>
+    <string name="text">Text</string>
+    <string name="text_field">Text Field</string>
     <string name="state">State</string>
     <string name="standard_layout">Standard Layout</string>
     <string name="hello_world">Hello world</string>

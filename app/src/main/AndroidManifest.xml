@@ -30,5 +30,8 @@
         <activity
             android:name=".layout.StandardLayoutActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".text.TextFieldActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 </manifest>

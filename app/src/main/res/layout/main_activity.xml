@@ -11,7 +11,7 @@
         android:orientation="vertical"
         android:padding="@dimen/default_padding">
         <androidx.cardview.widget.CardView
-            android:id="@+id/simple_text"
+            android:id="@+id/text"
             android:layout_width="match_parent"
             android:layout_height="@dimen/card_view_height"
             app:cardBackgroundColor="@color/colorPrimary"
@@ -20,7 +20,22 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/simple_text"
+                android:text="@string/text"
+                android:textColor="@color/white"
+                android:layout_gravity="center" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/textField"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_view_height"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_field"
                 android:textColor="@color/white"
                 android:layout_gravity="center" />
         </androidx.cardview.widget.CardView>

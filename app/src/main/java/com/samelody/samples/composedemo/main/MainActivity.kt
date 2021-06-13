@@ -5,10 +5,10 @@ import android.content.Intent
 import android.os.Bundle
 import com.samelody.samples.composedemo.base.BaseActivity
 import com.samelody.samples.composedemo.databinding.MainActivityBinding
-import com.samelody.samples.composedemo.layout.ConstraintLayoutActivity
 import com.samelody.samples.composedemo.layout.StandardLayoutActivity
 import com.samelody.samples.composedemo.state.StateActivity
 import com.samelody.samples.composedemo.text.TextActivity
+import com.samelody.samples.composedemo.text.TextFieldActivity
 import kotlin.reflect.KClass
 
 class MainActivity : BaseActivity() {
@@ -22,10 +22,10 @@ class MainActivity : BaseActivity() {
     }
 
     private fun initView() {
-        binding.simpleText.setOnClickListener { startExample(TextActivity::class) }
+        binding.text.setOnClickListener { startExample(TextActivity::class) }
+        binding.textField.setOnClickListener { startExample(TextFieldActivity::class) }
         binding.state.setOnClickListener { startExample(StateActivity::class) }
         binding.standardLayout.setOnClickListener { startExample(StandardLayoutActivity::class) }
-        binding.constraintLayout.setOnClickListener { startExample(ConstraintLayoutActivity::class) }
     }
 
     private fun Activity.startExample(cls: KClass<out Activity>) {

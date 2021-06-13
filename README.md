@@ -1,6 +1,6 @@
-# Compose by Examples
+# Compose by Example
 
-A demo app for learning Jetpack Compose by Examples.
+Learning Jetpack Compose by Examples.
 
 # Examples
 
@@ -10,12 +10,20 @@ A demo app for learning Jetpack Compose by Examples.
 |-------|-------|
 |<img src ="screenshots/text1.png" width=321 height=597 />|<img src ="screenshots/text2.png" width=321 height=597 />|
 
+## Text Field
+
+|||
+|-------|-------|
+|<img src ="screenshots/text_field1.png" width=321 height=597 />|<img src ="screenshots/text_field2.png" width=321 height=597 />|
+
 ## Standard Layout
 
 |||
 |-------|-------|
 |<img src ="screenshots/layout1.png" width=321 height=597 />|<img src ="screenshots/layout2.png" width=321 height=597 />|
 |<img src ="screenshots/layout3.png" width=321 height=597 />||
+
+*More examples are coming...*
 
 # License
 ```text

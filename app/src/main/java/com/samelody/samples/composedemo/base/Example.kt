@@ -17,17 +17,27 @@ import androidx.compose.ui.unit.sp
 val ExamplePadding = 12.dp
 
 @Composable
-fun TextExample(title: String) {
-    Example(title = title, startPadding = false)
+fun VExample(section: String) {
+    Example(section = section, hasHorizontalPadding = false)
 }
 
 @Composable
-fun Example(title: String, startPadding: Boolean = true) {
+fun HExample(section: String) {
+    Example(section = section, hasVerticalPadding = false)
+}
+
+@Composable
+fun Example(
+    section: String,
+    hasHorizontalPadding: Boolean = true,
+    hasVerticalPadding: Boolean = true
+) {
     // Text is a predefined composable that does exactly what you'd expect it to - display text on
     // the screen. It allows you to customize its appearance using style, fontWeight, fontSize, etc.
-    val start = if (startPadding) ExamplePadding else 0.dp
+    val horizontalPadding = if (hasHorizontalPadding) ExamplePadding else 0.dp
+    val verticalPadding = if (hasVerticalPadding) ExamplePadding else 0.dp
     Text(
-        "Example: $title",
+        "Example: $section",
         style = TextStyle(
             fontFamily = FontFamily.Monospace,
             fontWeight = FontWeight.W900,
@@ -35,10 +45,8 @@ fun Example(title: String, startPadding: Boolean = true) {
             color = Color.Black
         ),
         modifier = Modifier.padding(
-            start = start,
-            end = ExamplePadding,
-            top = ExamplePadding,
-            bottom = ExamplePadding
+            horizontal = horizontalPadding,
+            vertical = verticalPadding
         ).background(Color(0xFFEEEEEE)).fillMaxWidth()
     )
 }
@@ -46,5 +54,17 @@ fun Example(title: String, startPadding: Boolean = true) {
 @Composable
 @Preview(showBackground = true)
 private fun PreviewExample() {
-    Example("This is a section")
+    Example("This is a example section ")
+}
+
+@Composable
+@Preview(showBackground = true)
+private fun PreviewVExample() {
+    VExample("This is a example section without horizontal padding")
+}
+
+@Composable
+@Preview(showBackground = true)
+private fun PreviewHExample() {
+    HExample("This is a example section without vertical padding")
 }
