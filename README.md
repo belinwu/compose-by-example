@@ -1,7 +1,21 @@
-# ComposeDemo
+# Compose by Examples
 
 A demo app for learning Jetpack Compose by Examples.
 
+# Examples
+
+## Text
+
+|||
+|-------|-------|
+|<img src ="screenshots/text1.png" width=321 height=597 />|<img src ="screenshots/text2.png" width=321 height=597 />|
+
+## Standard Layout
+
+|||
+|-------|-------|
+|<img src ="screenshots/layout1.png" width=321 height=597 />|<img src ="screenshots/layout2.png" width=321 height=597 />|
+|<img src ="screenshots/layout3.png" width=321 height=597 />||
 
 # License
 ```text

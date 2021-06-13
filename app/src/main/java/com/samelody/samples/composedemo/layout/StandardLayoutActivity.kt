@@ -17,7 +17,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.samelody.samples.composedemo.base.BaseActivity
-import com.samelody.samples.composedemo.base.Section
+import com.samelody.samples.composedemo.base.Example
 import com.samelody.samples.composedemo.theme.AppTheme
 
 class StandardLayoutActivity : BaseActivity() {
@@ -35,35 +35,35 @@ private fun ContentView() {
             .verticalScroll(rememberScrollState()),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Section("Layout: Column")
+        Example("Column")
         ColumnLayout()
-        Section("Layout: Row")
+        Example("Row")
         RowLayout()
-        Section("Layout: Box")
+        Example("Box")
         BoxLayout()
-        Section("Layout: Column & Row & Box")
+        Example("Column & Row & Box")
         ProfileCard()
-        Section("Align: Column")
+        Example("Align: Column")
         AlignInColumn()
-        Section("Align: Row")
+        Example("Align: Row")
         AlignInRow()
-        Section("Modifier: padding")
+        Example("Modifier: padding")
         PaddingModifier()
-        Section("Modifier: size")
+        Example("Modifier: size")
         SizeModifier()
-        Section("Modifier: requiredSize")
+        Example("Modifier: requiredSize")
         RequiredSizeModifier()
-        Section("Modifier: fillMaxSize")
+        Example("Modifier: fillMaxSize")
         FillSizeModifier()
-        Section("Modifier: matchParentSize")
+        Example("Modifier: matchParentSize")
         MatchParentSizeModifier()
-        Section("Modifier: paddingFromBaseline")
+        Example("Modifier: paddingFromBaseline")
         PaddingFromBaselineModifier()
-        Section("Modifier: offset")
+        Example("Modifier: offset")
         OffsetModifier()
-        Section("Modifier: weight: Column")
+        Example("Modifier: weight: Column")
         ColumnWeightModifier()
-        Section("Modifier: weight: Row")
+        Example("Modifier: weight: Row")
         RowWeightModifier()
     }
 }
