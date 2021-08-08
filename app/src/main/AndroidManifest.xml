@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.samelody.samples.compose">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.samelody.samples.compose.main.MainActivity"
+            android:name=".main.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
@@ -20,18 +22,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.samelody.samples.compose.text.TextActivity"
+            android:name=".text.TextActivity"
             android:theme="@style/AppTheme.NoActionBar"
             />
         <activity
-            android:name="com.samelody.samples.compose.state.StateActivity"
+            android:name=".state.StateActivity"
             android:theme="@style/AppTheme.NoActionBar"
             />
         <activity
-            android:name="com.samelody.samples.compose.layout.StandardLayoutActivity"
+            android:name=".layout.StandardLayoutActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.samelody.samples.compose.text.TextFieldActivity"
+            android:name=".list.LazyColumnActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".list.LazyRowActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".text.TextFieldActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".image.ImageActivity"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 </manifest>

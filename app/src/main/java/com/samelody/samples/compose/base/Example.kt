@@ -41,7 +41,7 @@ fun Example(
         style = TextStyle(
             fontFamily = FontFamily.Monospace,
             fontWeight = FontWeight.W900,
-            fontSize = 14.sp,
+            fontSize = 16.sp,
             color = Color.Black
         ),
         modifier = Modifier.padding(

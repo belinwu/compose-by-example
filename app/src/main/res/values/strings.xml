@@ -1,8 +1,11 @@
 <resources>
-    <string name="app_name">Compose</string>
+    <string name="app_name">Compose by Example</string>
     <string name="text">Text</string>
     <string name="text_field">Text Field</string>
+    <string name="image">Image</string>
     <string name="state">State</string>
     <string name="standard_layout">Standard Layout</string>
+    <string name="list">List</string>
     <string name="hello_world">Hello world</string>
+    <string name="image_content_desc">Image content description</string>
 </resources>

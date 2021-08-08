@@ -40,6 +40,21 @@
                 android:layout_gravity="center" />
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_view_height"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/image"
+                android:textColor="@color/white"
+                android:layout_gravity="center" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
             android:id="@+id/state"
             android:layout_width="match_parent"
             android:layout_height="@dimen/card_view_height"
@@ -66,6 +81,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/standard_layout"
+                android:textColor="@color/white"
+                android:layout_gravity="center" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_view_height"
+            android:layout_marginTop="@dimen/default_padding"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:padding="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/list"
                 android:textColor="@color/white"
                 android:layout_gravity="center" />
         </androidx.cardview.widget.CardView>

@@ -49,7 +49,7 @@ allprojects {
             force(Dep.kotlinReflect)
             force(Dep.kotlinStdlib)
             force(Dep.kotlinStdlibCommon)
-            force(Dep.kotlinStdlibJdk8)
+            force(Dep.kotlinStdlibJvm8)
             force(Dep.lifecycle)
             force(Dep.lifecycleCommon)
             force(Dep.liveData)
