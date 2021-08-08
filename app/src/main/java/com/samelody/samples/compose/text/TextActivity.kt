@@ -3,7 +3,11 @@ package com.samelody.samples.compose.text
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.foundation.text.selection.DisableSelection
@@ -15,24 +19,32 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.*
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.ParagraphStyle
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.samelody.samples.compose.R
-import com.samelody.samples.compose.base.*
-import com.samelody.samples.compose.theme.AppTheme
+import com.samelody.samples.compose.R.string
+import com.samelody.samples.compose.base.ActivityScaffold
+import com.samelody.samples.compose.base.BaseActivity
+import com.samelody.samples.compose.base.ExamplePadding
+import com.samelody.samples.compose.base.VExample
+import com.samelody.samples.compose.base.shortToast
 
 class TextActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent { AppTheme { ContentView() } }
+        setContent { ActivityScaffold(string.text) { ContentView() } }
     }
 }
 

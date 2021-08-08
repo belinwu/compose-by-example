@@ -10,13 +10,14 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.samelody.samples.compose.R
+import com.samelody.samples.compose.base.ActivityScaffold
 import com.samelody.samples.compose.base.BaseActivity
-import com.samelody.samples.compose.theme.AppTheme
 
 class LazyRowActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent { AppTheme { ContentView() } }
+        setContent { ActivityScaffold(R.string.lazy_row) { ContentView() } }
     }
 }
 

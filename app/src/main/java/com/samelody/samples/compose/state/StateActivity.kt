@@ -15,13 +15,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.samelody.samples.compose.R
+import com.samelody.samples.compose.base.ActivityScaffold
 import com.samelody.samples.compose.base.BaseActivity
 import com.samelody.samples.compose.base.VExample
 
 class StateActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent { ContentView() }
+        setContent { ActivityScaffold(R.string.state) { ContentView() } }
     }
 }
 

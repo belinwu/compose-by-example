@@ -30,7 +30,7 @@
             android:theme="@style/AppTheme.NoActionBar"
             />
         <activity
-            android:name=".layout.StandardLayoutActivity"
+            android:name=".layout.BasicLayoutActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".list.LazyColumnActivity"

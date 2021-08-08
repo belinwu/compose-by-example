@@ -74,6 +74,9 @@ private fun Context.startExample(cls: KClass<out Activity>) {
     Intent(this, cls.java).apply {
         startActivity(this)
     }
+    if (this is Activity) {
+        overridePendingTransition(0, 0)
+    }
 }
 
 @Composable

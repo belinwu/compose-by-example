@@ -19,16 +19,17 @@ import androidx.compose.ui.unit.dp
 import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
 import com.samelody.samples.compose.R
+import com.samelody.samples.compose.R.string
+import com.samelody.samples.compose.base.ActivityScaffold
 import com.samelody.samples.compose.base.BaseActivity
 import com.samelody.samples.compose.base.ExamplePadding
 import com.samelody.samples.compose.base.VExample
-import com.samelody.samples.compose.theme.AppTheme
 
 @ExperimentalCoilApi
 class ImageActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent { AppTheme { ContentView() } }
+        setContent { ActivityScaffold(string.image) { ContentView() } }
     }
 }
 
@@ -40,7 +41,7 @@ private fun ContentView() {
             .padding(horizontal = ExamplePadding)
             .verticalScroll(rememberScrollState())
     ) {
-        VExample("Coil image")
+        VExample("Coil")
         CoilImage()
     }
 }
