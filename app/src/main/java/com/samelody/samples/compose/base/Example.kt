@@ -1,18 +1,24 @@
 package com.samelody.samples.compose.base
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Text
+import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import kotlin.reflect.KClass
 
 val ExamplePadding = 12.dp
 
@@ -49,6 +55,25 @@ fun Example(
             vertical = verticalPadding
         ).background(Color(0xFFEEEEEE)).fillMaxWidth()
     )
+}
+
+@Composable
+fun ExampleItem(
+    text: String,
+    cls: KClass<out Activity>,
+) {
+    val context = LocalContext.current
+    TextButton(
+        onClick = { context.startExample(cls) }
+    ) {
+        Text(text)
+    }
+}
+
+private fun Context.startExample(cls: KClass<out Activity>) {
+    Intent(this, cls.java).apply {
+        startActivity(this)
+    }
 }
 
 @Composable
